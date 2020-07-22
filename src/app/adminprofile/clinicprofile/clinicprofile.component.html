@@ -1,0 +1,46 @@
+<div class="divBg aqua-gradient">
+  <!--Navbar -->
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" routerLink="">
+      <img src="assets/images/logo1.png" alt="logo" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+      aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" role="button" (click)="clickHome()">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" role="button" (click)="openNotifications()"
+            routerLinkActive="active current">Notifications <span class="badge badge-danger"
+              *ngIf="notificationNum>0 && !readNotifications">{{ notificationNum }}</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" role="button" (click)="openProfile()" routerLinkActive="active current">Profile</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+
+        <li class="nav-item">
+          <a role="button" class="btn btn-outline-primary btn-md" outline="true" fill="none" routerLink="/adminlogin">
+            <i class="fas fa-user"></i>
+            Logout
+          </a>
+        </li>
+
+
+      </ul>
+    </div>
+  </nav>
+  <!--/.Navbar -->
+  <div class="container">
+    <app-clinicnotifications *ngIf="showNotifications"></app-clinicnotifications>
+    <app-clinic-details *ngIf="showProfile"></app-clinic-details>
+    <app-clinichome *ngIf="showHome"></app-clinichome>
+  </div>
+</div>

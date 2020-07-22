@@ -1,0 +1,38 @@
+.divBg {
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    margin-top: -72.5px;
+    min-height: 100vh;
+}
+
+.card {
+    width: 30rem;
+    top: 9rem;
+      
+}
+.card-body h2 {
+  color: #636363;
+  margin: 0 0 15px;
+  position: relative;
+  text-align: center;
+}
+
+
+.card-body h2:after,
+.card-body h2:before {
+      content: "";
+      height: 2px;
+      width: 23%;
+      background: #d4d4d4;
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+}
+
+.card-body h2:before {
+  left: 0;
+}
+
+.card-body h2:after {
+  right: 0;
+}
+

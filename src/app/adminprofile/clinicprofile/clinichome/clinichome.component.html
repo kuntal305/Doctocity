@@ -1,0 +1,29 @@
+<div class="centerdiv">
+  <div class="container text-center">
+    <h1 class="text-white">Welcome, Mr. Raj Dutta</h1>
+    <p class="lead text-white">
+      This is the Admin Dashboard
+      <br>
+      Control your Clinic Appointments here.
+    </p>
+    
+    <div class="wrapper">
+      <div class="card mx-auto">
+        <div class="card-body">
+          <div class="card-text">
+            <button class="butn float-right" (click)="toggleHidden()" [hidden]="!hidden"><i
+                class="fas fa-times"></i></button>
+            <p class="mb-0" [hidden]=!hidden>You Have <b class="text-danger">8</b> new Notifications</p>
+            <p class="mb-0" [hidden]=hidden>
+              You Have no new Notifications
+            </p>
+            <!-- <a class="stretched-link"></a> -->
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>

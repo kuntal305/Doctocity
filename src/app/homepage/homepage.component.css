@@ -1,0 +1,18 @@
+.centerdiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  /* background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF); */
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+button {
+  width: 20rem;
+}
+
+
+
+

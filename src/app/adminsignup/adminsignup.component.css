@@ -1,0 +1,15 @@
+.divBg {
+  margin-top: -72.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+button {
+  width: 15rem;
+  border-color: aliceblue;
+}
+

@@ -1,0 +1,340 @@
+
+<ngx-spinner></ngx-spinner>
+
+<!-- Content -->
+<div class="centerdiv">
+  <div class="container">
+
+    <div id="#card" class="card mx-auto" style="width: 20em; margin-top: -2rem; display: block;" [style.display]="click">
+      <div class="card-body">
+        <form #detailsForm="ngForm">
+          <div  class="form-group mx-auto">
+            
+            <input type="text" class="form-control" placeholder="Enter Location Here" name="location" id="location" ngModel #location="ngModel">
+            
+          </div>
+          
+          <div  class="form-group mx-auto">
+            
+            <select class="form-control empty" id="specilaity" name="specilaity" ngModel #speciality="ngModel">
+              <option selected disabled value="">Select Specialist</option>
+              <option *ngFor="let doc of doctors" [value]="doc.name">{{ doc.name }}</option>
+            </select>
+
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-md btn-primary" (click)="enterDetails(detailsForm.value.location, detailsForm.value.specilaity)">Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+    <!-- <button class="btn btn-sm btn-outline-success my-2 my-sm-0" (click)="onSearch()">Continue</button> -->
+    
+    <section id="doctors" class="pb-5" [style.display]="click1">
+      <!-- <button (click)="onclick()">Click</button> -->
+      <div class="container">
+        <h5 class="section-title h3 text-white">Book from 100 Doctors from {{ detailsForm.value.location }}</h5>
+        <div class="row">
+          
+          <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let i of doctorList">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png"
+                          alt="card image">
+                      </p>
+                      <h4 class="card-title">{{ i.name }}</h4>
+                      <p class="card-text">Dentist</p>
+                      <a href="#" class="btn btn-primary btn-sm">Hover To View</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title" >Doctor Name</h4>
+                      <p class="card-text" style="margin-bottom: -5px;">
+                        <b>Speciality: </b>Dentist</p>
+                        <p class="card-text" style="margin-bottom: -5px;"><b>Experience: </b>15 years</p>
+                        <p class="card-text" ><b>Address: </b>{{ i.address.chamber }}</p>
+                        <p class="card-text" style="margin-bottom: -2px;"><b>Visits on: </b>Mon, Tue, Sat</p>
+                        <p class="card-text" ><b>Price Per Visit: </b>Rs. 500</p>
+                      <button routerLink="book" class="btn btn-primary btn-sm">Book Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ./Team member -->
+
+
+
+          
+          <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_02.png"
+                          alt="card image"></p>
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Sunlimetech</h4>
+                      
+                      <p class="card-text">
+                        <b>Speciality: </b>Dentist</p>
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-skype"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-google"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- ./Team member -->
+          
+          
+          
+          <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_03.png"
+                          alt="card image"></p>
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-skype"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-google"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- ./Team member -->
+          
+          
+          
+          <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_04.jpg"
+                          alt="card image"></p>
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-skype"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-google"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- ./Team member -->
+          
+          
+          
+          <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_05.png"
+                          alt="card image"></p>
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-skype"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-google"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- ./Team member -->
+          
+          <!-- <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+              <div class="mainflip">
+                <div class="frontside">
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <p><img class=" img-fluid"
+                          src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_06.jpg"
+                          alt="card image"></p>
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="backside">
+                  <div class="card">
+                    <div class="card-body text-center mt-4">
+                      <h4 class="card-title">Sunlimetech</h4>
+                      <p class="card-text">Speciality</p>
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-skype"></i>
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                            <i class="fa fa-google"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- ./Team member -->
+
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

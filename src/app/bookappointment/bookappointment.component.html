@@ -1,0 +1,137 @@
+<div class="divBg"[style.display]="displayDiv">
+  <div class="signup-form" >
+
+    <form action="">
+      <h2>Patient Details</h2>
+      <p class="text-center"><b>Doctor's Name: </b>S. Kundu</p>
+
+
+      <!-- Name -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" name="first_name" placeholder="First Name" required="required">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Age & Gender -->
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 input-group mb-3">
+              <div class="input-group-prepend" style="margin-right:-10px">
+                <label class="input-group-text" for="inputGroupSelect01">Age</label>
+              </div>
+              <select class="custom-select">
+                <option disabled selected hidden></option>
+                <option *ngFor="let number of counter(50); let  i = index" value="{{ i }}">{{ i }}</option>
+                <option value="50+">50+</option>
+                <!-- <option value="2">Two</option>
+                <option value="3">Three</option> -->
+              </select>
+            
+          </div>
+          <div class="col-md-6 input-group mb-3">
+            <div class="input-group-prepend" style="margin-right:-10px">
+              <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected></option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Email & Ph. no. -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+          </div>
+          <div class="col-md-6 input-group-prepend" style="margin-right:-10px">
+              <label class="input-group-text">+91</label>
+              <input type="tel" class="form-control" name="phnum" placeholder="Phone Number" required minlength=10 maxlength=10>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Symptoms -->
+      <div class="form-group">
+        <div class="row">
+          <label style="margin-left: 20px;">Symptoms:</label>
+          <div class="col-md-12 mx-auto">
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 1
+            </label>
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 2
+            </label>
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 3
+            </label>
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 1
+            </label>
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 1 
+            </label>
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 1
+            </label>
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 1
+            </label>
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 1
+            </label>
+            <label class="checkbox-inline"><input type="checkbox"> Symptom 1
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Time Slots -->
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 input-group">
+            <div class="input-group-prepend" style="margin-right:-10px">
+              <label class="input-group-text" for="inputGroupSelect01">Time Slot</label>
+            </div>
+            <select class="custom-select">
+              <option disabled selected hidden></option>
+              <option value="">1:00 - 3:00 PM</option>
+              <option value="">3:00 - 5:00 PM</option>
+              <option value="">5:00 - 7:00 PM</option>
+              <option value="">7:00 - 9:00 PM</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      
+      
+      
+      <!-- Button -->
+      <div class="form-group">
+        <button type="submit" (click)="onBook()" class="btn aqua-gradient btn-lg btn-block">Book Now</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-booksucess [style.display]="displayAlert"></app-booksucess>
+
+
+
+                  <!-- <div class="form-group">
+                    <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#"
+                        style="color: blue;">Terms of
+                        Use</a> &amp; <a href="#" style="color: blue;">Privacy Policy</a></label>
+                  </div> -->
+
+

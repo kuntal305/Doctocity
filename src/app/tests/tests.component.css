@@ -1,0 +1,26 @@
+.divBg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: -10px;
+  /* background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF); */
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+
+#tests {
+    margin-top: 2rem;
+}
+
+.inner {
+    margin: .5em 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 40rem;
+}
+
+div .jumbotron {
+  padding: 1.5rem;
+  background: transparent;
+}

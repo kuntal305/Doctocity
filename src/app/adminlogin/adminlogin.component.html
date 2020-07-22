@@ -1,0 +1,46 @@
+<div class="divBg aqua-gradient">
+  <div class="container card mx-auto">
+    <div class="card-body">
+      <!-- Default form login -->
+      <form class="text-center border border-light p-5">
+
+        <h2>Admin Login</h2>
+
+        <!-- Email -->
+        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+        <!-- Password -->
+        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+
+        <div class="d-flex justify-content-around" style="margin-top: -10px;">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+            <label class="custom-control-label" for="defaultUnchecked">Remember Me</label>
+          </div>
+          <div>
+            <!-- Forgot password -->
+            <a href="">Forgot password?</a>
+          </div>
+        </div>
+
+        <!-- Sign in button -->
+        <button type="button" (click)="onLogin()" class="btn btn-outline-success btn-md waves-effect"
+          style="margin: 3rem 0 3rem ;">Continue As Admin</button>
+
+        <!-- Register -->
+        <p>Not a member?
+          <a routerLink="/adminsignup">Sign Up</a>
+        </p>
+
+
+        <div>
+          <a routerLink="/login">User Login</a>
+
+        </div>
+
+
+      </form>
+      <!-- Default form login -->
+    </div>
+  </div>
+</div>

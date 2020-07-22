@@ -1,0 +1,140 @@
+<div class="divBg aqua-gradient">
+  <div class="signup-form">
+    <form action="">
+      <h2>Doctor Sign Up</h2>
+      <p class="hint-text">Create your account as a Doctor<b class="text-danger">*</b></p>
+
+      <!-- Doctor Name -->
+      <div class="form-group">
+        <input type="text" class="form-control" name="first_name" placeholder="Doctor's Name" required="required">
+      </div>
+
+      <!-- Age & Gender -->
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-5 input-group ">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Age</label>
+            </div>
+            <input type="number" name="age" id="age" class="form-control" min="25" max="90">
+            
+
+          </div>
+          <div class="col-md-7 input-group">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+            </div>
+            <select class="form-control" id="inputGroupSelect01">
+              <option selected></option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            
+
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Experience & Speciality -->
+      <div class="form-group">
+        
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Experience (in years)</label>
+            </div>
+            <input type="number" name="exp" id="exp" class="form-control" min="0" max="50+">
+          </div>
+        
+      </div>
+
+      <div class="form-group">
+        
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <label for="" class="input-group-text">Speciality</label>
+            </div>
+            <select class="form-control" id="inputGroupSelect01">
+              <option selected disabled hidden></option>
+              <option value="Dentist">Dentist</option>
+              <option value="Ob-Gyn">Ob-Gyn</option>
+              <option value="Gen. Physician">Gen. Physician</option>
+              <option value="Dermatologist">Dermatologist</option>
+              <option value="ENT Specialist">ENT Specialist</option>
+              <option value="Homeopath">Homeopath</option>
+              <option value="Ayurveda">Ayurveda</option>
+            </select>
+            
+            
+        </div>
+      </div>
+      
+
+      <!-- Price -->
+      <div class="form-group">
+
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <label class="input-group-text">Price per Visit</label>
+          </div>
+          <input type="number" name="price" id="price" class="form-control" min="100">
+        </div>
+
+      </div>
+
+      <!-- Chamber Address -->
+      <div class="form-group">
+        <textarea class="form-control" id="chamberaddress" rows="7" placeholder="Enter Your Chamber's Address"></textarea>
+      </div>
+
+      <!-- City & Pincode -->
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <input type="text" name="city" id="city" placeholder="City" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <input type="number" name="pincode" id="pincode" placeholder="Pincode" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+      </div>
+
+      <!-- Password & Confirm Password -->
+      <div class="form-group">
+        
+        <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+        <small id="passwordHelpBlock" class="form-text text-muted">
+          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+          characters, or emoji.
+        </small>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password"
+          required="required">
+      </div>
+
+      <!-- Terms and conditions -->
+      <div class="form-group">
+        <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#"
+            style="color: blue;">Terms of
+            Use</a> &amp; <a href="#" style="color: blue;">Privacy Policy</a></label>
+      </div>
+      <p class="text-danger">*All fields are mandatory</p>
+
+      <!-- Button -->
+      <div class="form-group mb-2">
+        <button (click)="onRegister()" type="submit" class="btn aqua-gradient btn-lg btn-block">Register Now</button>
+      </div>
+      <p class="text-center mb-1">OR</p>
+      <p class="text-center mb-0">
+        <a routerLink="/clinicsignup" class="text-primary">Diagnostic Clinic Signup</a>
+      </p>
+    </form>
+  </div>
+</div>

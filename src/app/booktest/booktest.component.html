@@ -1,0 +1,108 @@
+<div class="divBg" [style.display]="displayDiv">
+  <div class="signup-form">
+
+    <form action="">
+      <h2>Booking Details</h2>
+      <p class="text-center"><b>Test Name:&nbsp;</b>Hba1c</p>
+
+      <!-- Doc Name -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" class="form-control" name="doc_name" placeholder="Doctor's Name" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Name -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="first_name" placeholder="First Name" required="required">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">
+          </div>
+        </div>
+      </div>
+
+      <!-- Age & Gender -->
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 input-group">
+            <div class="input-group-prepend" style="margin-right:-10px">
+              <label class="input-group-text" for="inputGroupSelect01">Age</label>
+            </div>
+            <select class="custom-select">
+              <option disabled selected hidden></option>
+              <option *ngFor="let number of counter(50); let  i = index" value="{{ i }}">{{ i }}</option>
+              <option value="50+">50+</option>
+              <!-- <option value="2">Two</option>
+                <option value="3">Three</option> -->
+            </select>
+
+          </div>
+          <div class="col-md-6 input-group">
+            <div class="input-group-prepend" style="margin-right:-10px">
+              <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected></option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Email & Ph. no. -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+          </div>
+          <div class="col-md-6 input-group">
+            <div class="input-group-prepend" style="margin-right:-10px">
+              <label class="input-group-text">+91</label>
+            </div>
+            <input type="tel" class="form-control" name="phnum" placeholder="Phone Number" required minlength=10
+              maxlength=10>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Date & Time Slots -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 input-group">
+            <div class="input-group-prepend" style="margin-right: -10px;">
+              <label class="input-group-text" >Date</label>
+            </div>
+            <input type="date" name="date" id="date" class="form-control" required>
+          </div>
+          <div class="col-md-6 input-group">
+            <div class="input-group-prepend" style="margin-right: -10px;">
+              <label class="input-group-text">Time</label>
+            </div>
+            <input type="time" name="time" id="time" class="form-control" required>
+          </div>
+        </div>
+      </div>
+      
+
+
+      <!-- Button -->
+      <div class="form-group">
+        <button type="submit" (click)="onBook()" class="btn aqua-gradient btn-lg btn-block">Book Now</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-booksucess [style.display]="displayAlert"></app-booksucess>
+

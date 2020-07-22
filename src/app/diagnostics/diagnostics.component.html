@@ -1,0 +1,146 @@
+<div class="divBg">
+  <div class="container">
+
+    <!-- Location -->
+
+    <div id="#card" class="card mx-auto" style="width: 20em; margin-top: -2rem; display: block;"
+      [style.display]="click">
+      <div class="card-body">
+        <div class="card-title text-center">
+          <h3>Location</h3>
+        </div>
+        <div class="input-group mb-3">
+
+          <input type="text" class="form-control" placeholder="Enter Location Here" aria-label="Location"
+            aria-describedby="basic-addon1" [(ngModel)]="location">
+          <div class="input-group-append">
+            <button class="btn btnStyle" type="button" (click)="onClick()">
+              <i class="fas fa-location-arrow"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------- -->
+
+    <!-- Main Content -->
+
+    <section id="tests" [style.display]="click1">
+      <div class="container">
+        <h5 class="section-title h3 text-white">Book from available test in {{ location }}</h5>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card rounded-circle">
+              <div class="card-body text-center">
+                <a routerLink="/tests" class="stretched-link">
+                  <img src="assets/images/diabetes.svg" alt="diabetes" class="avatar">
+                </a>
+                <p class="card-title h5 lead" style="padding: 6px 0 0 -2px;">Diabetes</p>
+                <!-- <p style="margin-bottom: -2px;">
+                  <a routerLink="/tests" role="button" class="btn btn-md btn-outline-primary">View Tests</a>
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-circle">
+              <div class="card-body text-center">
+                <a routerLink="/tests" class="stretched-link">
+                  <img src="assets/images/diabetes.svg" alt="diabetes" class="avatar">
+                </a>
+                <p class="card-title h5 lead" style="padding: 6px 0 0 -2px;">Diabetes</p>
+                <!-- <p style="margin-bottom: -2px;">
+                  <a routerLink="/tests" role="button" class="btn btn-md btn-outline-primary">View Tests</a>
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-circle">
+              <div class="card-body text-center">
+                <a routerLink="/tests" class="stretched-link">
+                  <img src="assets/images/diabetes.svg" alt="diabetes" class="avatar">
+                </a>
+                <p class="card-title h5 lead" style="padding: 6px 0 0 -2px;">Diabetes</p>
+                <!-- <p style="margin-bottom: -2px;">
+                  <a routerLink="/tests" role="button" class="btn btn-md btn-outline-primary">View Tests</a>
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-circle">
+              <div class="card-body text-center">
+                <a routerLink="/tests" class="stretched-link">
+                  <img src="assets/images/diabetes.svg" alt="diabetes" class="avatar">
+                </a>
+                <p class="card-title h5 lead" style="padding: 6px 0 0 -2px;">Diabetes</p>
+                <!-- <p style="margin-bottom: -2px;">
+                  <a routerLink="/tests" role="button" class="btn btn-md btn-outline-primary">View Tests</a>
+                </p> -->
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card rounded-circle">
+              <div class="card-body text-center">
+                <a routerLink="/tests" class="stretched-link">
+                  <img src="assets/images/diabetes.svg" alt="diabetes" class="avatar">
+                </a>
+                <p class="card-title h5 lead" style="padding: 6px 0 0 -2px;">Diabetes</p>
+                <!-- <p style="margin-bottom: -2px;">
+                  <a routerLink="/tests" role="button" class="btn btn-md btn-outline-primary">View Tests</a>
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-circle">
+              <div class="card-body text-center">
+                <a routerLink="/tests" class="stretched-link">
+                  <img src="assets/images/diabetes.svg" alt="diabetes" class="avatar">
+                </a>
+                <p class="card-title h5 lead" style="padding: 6px 0 0 -2px;">Diabetes</p>
+                <!-- <p style="margin-bottom: -2px;">
+                  <a routerLink="/tests" role="button" class="btn btn-md btn-outline-primary">View Tests</a>
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-circle">
+              <div class="card-body text-center">
+                <a routerLink="/tests" class="stretched-link">
+                  <img src="assets/images/diabetes.svg" alt="diabetes" class="avatar">
+                </a>
+                <p class="card-title h5 lead" style="padding: 6px 0 0 -2px;">Diabetes</p>
+                <!-- <p style="margin-bottom: -2px;">
+                  <a routerLink="/tests" role="button" class="btn btn-md btn-outline-primary">View Tests</a>
+                </p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-circle">
+              <div class="card-body text-center">
+                <a routerLink="/tests" class="stretched-link">
+                  <img src="assets/images/diabetes.svg" alt="diabetes" class="avatar">
+                </a>
+                <p class="card-title h5 lead" style="padding: 6px 0 0 -2px;">Diabetes</p>
+                <!-- <p style="margin-bottom: -2px;">
+                  <a routerLink="/tests" role="button" class="btn btn-md btn-outline-primary">View Tests</a>
+                </p> -->
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>

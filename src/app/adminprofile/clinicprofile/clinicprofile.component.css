@@ -1,0 +1,11 @@
+.divBg {
+  height: 100vh;
+}
+
+.logo {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  margin: -10px;
+  border-radius: 50%;
+}

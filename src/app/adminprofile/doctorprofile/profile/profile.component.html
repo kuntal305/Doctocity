@@ -1,0 +1,152 @@
+<div class="wrapper">
+  <div class="card">
+    <div class="card-header text-center" style="font-size: x-large;">
+      Profile Details
+      <button class="btn btn-primary btn-sm float-right" (click)="onEdit()">Edit</button>
+    </div>
+    <div class="card-body">
+      <div class="card">
+        <div class="card-body">
+          <form #editForm="ngForm" (ngSubmit)="onSave()">
+
+            <!-- Name -->
+            <div class="form-group row">
+              <label for="name" class="col-md-2 col-form-label"><b>Name:</b></label>
+              
+              <div class="col-md-5">
+                <input type="text" name="name" id="name" class="form-control" [(ngModel)]="name" [disabled]="disabled">
+              </div>
+              
+            </div>
+
+            <!-- Age -->
+            <div class="form-group row">
+              <label for="age" class="col-md-2 col-form-label"><b>Age:</b></label>
+              
+              <div class="col-md-2">
+                <input type="number" name="age" id="age" class="form-control" [(ngModel)]="age" [disabled]="disabled">
+              </div>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group row">
+              <label for="gender" class="col-md-2 col-form-label"><b>Gender:</b></label>
+
+              <div class="col-md-2">
+                <input type="text" name="gender" id="gender" class="form-control" [(ngModel)]="gender" disabled>
+              </div>
+              <div class="col-md-3">
+                <small class="text-danger" style="font-size: x-small;">*Cannot be Changed</small>
+              </div>
+            </div>
+
+            <!-- Speciality -->
+            <div class="form-group row">
+              <label for="speciality" class="col-md-2 col-form-label"><b>Speciality:</b></label>
+
+              <div class="col-md-3">
+                <select class="form-control" id="speciality" name="speciality" [(ngModel)]="speciality" [disabled]="disabled">
+                  
+                  <option value="Dentist">Dentist</option>
+                  <option value="Ob-Gyn">Ob-Gyn</option>
+                  <option value="Gen. Physician">Gen. Physician</option>
+                  <option value="Dermatologist">Dermatologist</option>
+                  <option value="ENT Specialist">ENT Specialist</option>
+                  <option value="Homeopath">Homeopath</option>
+                  <option value="Ayurveda">Ayurveda</option>
+                </select>
+              </div>  
+            </div>
+            
+
+            <!-- Experience -->
+            <div class="form-group row">
+              <label for="exp" class="col-md-2 col-form-label"><b>Experience</b><small> (in years) </small><b>:</b></label>
+
+              <div class="col-md-2">
+                <input type="number" name="exp" id="exp" class="form-control" [(ngModel)]="exp" [disabled]="disabled">
+              </div>
+            </div>
+            
+            <!-- Chamber Address -->
+            <div class="form-group row">
+              <label for="address" class="col-md-2 col-form-label"><b>Chamber Address:</b></label>
+
+              <div class="col-md-6">
+                <textarea name="address" id="address" class="form-control" [(ngModel)]="address" rows="2" [disabled]="disabled"></textarea>
+              </div>
+            </div>
+
+            <!-- City -->
+            <div class="form-group row">
+              <label for="city" class="col-md-2 col-form-label"><b>City: </b></label>
+
+              <div class="col-md-3">
+                <input type="text" name="city" id="city" class="form-control" [(ngModel)]="city" [disabled]="disabled">
+              </div>
+            </div>
+
+            <!-- Pincode -->
+            <div class="form-group row">
+              <label for="pincode" class="col-md-2 col-form-label"><b>Pincode: </b></label>
+
+              <div class="col-md-2">
+                <input type="number" name="pincode" id="pincode" class="form-control" [(ngModel)]="pincode" [disabled]="disabled" minlength="6" maxlength="6">
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group row">
+              <label for="email" class="col-md-2 col-form-label"><b>Email: </b></label>
+
+              <div class="col-md-4">
+                <input type="email" name="email" id="email" class="form-control" [(ngModel)]="email" [disabled]="disabled">
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group row">
+              <label for="password" class="col-md-2 col-form-label"><b>Password: </b></label>
+
+              <div class="col-md-4">
+                <input type="password" name="password" id="password" class="form-control" [(ngModel)]="password"
+                  [disabled]="disabled" (change)="passChange()" (focus)="closeConf()">
+              </div>
+              
+            </div>
+
+            
+
+            <!-- Confirm Password -->
+            <div class="form-group row" [hidden]="!confirm">
+              <label for="cpassword" class="col-md-2 col-form-label"><b>Confirm Password: </b></label>
+
+              <div class="col-md-4">
+                <input type="password" name="cpassword" id="cpassword" class="form-control" [(ngModel)]="cpassword" (blur)="checkPass()" #cpass>
+              </div>
+              <div class="col-md-6">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" [hidden]="!alertShow">
+                  Passwords Do Not Match!
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeConf()">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row text-center" [hidden]="disabled">
+              <div class="col-md-12">
+                <button class="btn btn-sm btn-primary" (click)="onSave()">Save</button>
+              
+                <button class="btn btn-sm btn-danger" (click)="onCancel(editForm)">Cancel</button>
+              </div>
+            </div>
+
+
+
+          </form>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
